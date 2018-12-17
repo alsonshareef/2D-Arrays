@@ -83,3 +83,25 @@ let multiply = () => {
 }
 
 multiply()
+
+// DIVISION
+
+let divide = () => {
+    let output = []
+    let divisionItems = [
+        [4, 2],
+        [1, 2]
+    ]
+    
+    for (let i = 0; i <= items.length - 1; i++){
+        output.push([])
+        
+        for(let a = 0; a <= 1; a++){
+            output[i].push(items[i][a])
+            output[i][a] /= divisionItems[i][a]
+        }
+    }
+    console.log('After dividing from items array, the new array is:\n', output)
+}
+
+divide()
