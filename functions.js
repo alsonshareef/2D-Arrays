@@ -1,99 +1,83 @@
-let items = [
-    [3, 4],
-    [2, 5]
-];
 
 // ADDITION
-exports.add = () => {
-    let output = []
-    let additionItems = [
-        [2, 3],
-        [1, 6]
-    ]
+exports.add = (start, test) => {
+    console.log('\n-- ADDITION --')
+    console.log('Starting numbers:\n', start)
+    console.log('The numbers that will be added to starting numbers are:\n', test)
     
-    console.log('-- ADDITION --')
-    console.log('Starting numbers:\n', items)
-    console.log('The numbers that will be added to starting numbers are:\n', additionItems)
-
-    for (let i = 0; i <= items.length - 1; i++){
+    let output = []
+    for (let i = 0; i <= start.length - 1; i++){
         output.push([])
         
         for(let a = 0; a <= 1; a++){
-            output[i].push(items[i][a])
-            output[i][a] += additionItems[i][a]
+            output[i].push(start[i][a])
+            output[i][a] += test[i][a]
         }
     }
     console.log('After adding to items array, the new array is:\n', output, '\n')
+    return output
 }
 
 
 // SUBTRACTION
-exports.subtract = () => {
-    let output = []
-    let subtractionItems = [
-        [9, 2],
-        [3, 7]
-    ]
-
-    console.log('-- SUBTRACTION --')
-    console.log('Starting numbers:\n', items)
-    console.log('The numbers that will be subtracted from starting numbers are:\n', subtractionItems)
+exports.subtract = (start, test) => {
+    console.log('\n-- SUBTRACTION --')
+    console.log('Starting numbers:\n', start)
+    console.log('The numbers that will be subtracted from starting numbers are:\n', test)
     
-    for (let i = 0; i <= items.length - 1; i++){
+    let output = []
+    for (let i = 0; i <= start.length - 1; i++){
         output.push([])
         
         for(let a = 0; a <= 1; a++){
-            output[i].push(items[i][a])
-            output[i][a] -= subtractionItems[i][a]
+            output[i].push(start[i][a])
+            output[i][a] -= test[i][a]
         }
     }
     console.log('After subtracting from items array, the new array is:\n', output, '\n')
+    return output
 }
 
 
 // MULTIPLICATION
-exports.multiply = () => {
-    let output = []
-    let multiplicationItems = [
-        [2, 6],
-        [8, 4]
-    ]
-
-    console.log('-- MULTIPLICATION --')
-    console.log('Starting numbers:\n', items)
-    console.log('The numbers that will be multiplied to starting numbers are:\n', multiplicationItems)
+exports.multiply = (matA, matB) => {
+    console.log('\n-- MULTIPLICATION --')
+    console.log('Starting numbers:\n', matA)
+    console.log('The numbers that will be multiplied to starting numbers are:\n', matB)
     
-    for (let i = 0; i <= items.length - 1; i++){
+    let numRow = matA.length
+    let numCol = matA[0].length
+    let output = []
+    for (let i = 0; i < numRow; i++){
         output.push([])
         
-        for(let a = 0; a <= 1; a++){
-            output[i].push(items[i][a])
-            output[i][a] *= multiplicationItems[i][a]
+        for(let a = 0; a < numCol; a++){
+            output[i].push(matA[a][i])
+            output[i][a] *= matB[i][a]
         }
     }
     console.log('After multiplying from items array, the new array is:\n', output, '\n')
+    return output
 }
 
 
 // DIVISION
-exports.divide = () => {
-    let output = []
-    let divisionItems = [
-        [4, 2],
-        [1, 2]
-    ]
-
-    console.log('-- DIVISION --')
-    console.log('Starting numbers:\n', items)
-    console.log('The numbers that will be divided from starting numbers are:\n', divisionItems)
+exports.divide = (matA, matB) => {
+    console.log('\n-- DIVIDE --')
+    console.log('Starting numbers:\n', matA)
+    console.log('The numbers that will be multiplied to starting numbers are:\n', matB)
     
-    for (let i = 0; i <= items.length - 1; i++){
+    let numRow = matA.length
+    let numCol = matA[0].length
+    let output = []
+    for (let i = 0; i < numRow; i++){
         output.push([])
         
-        for(let a = 0; a <= 1; a++){
-            output[i].push(items[i][a])
-            output[i][a] /= divisionItems[i][a]
+        for(let a = 0; a < numCol; a++){
+            output[i].push(matA[a][i])
+            output[i][a] /= matB[i][a]
         }
     }
     console.log('After dividing from items array, the new array is:\n', output, '\n')
+    return output
 }
