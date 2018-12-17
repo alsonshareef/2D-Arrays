@@ -40,3 +40,24 @@ let add = () => {
 
 add()
 
+// SUBTRACTION
+
+let subtract = () => {
+    let output = []
+    let subtractionItems = [
+        [9, 2],
+        [3, 7]
+    ]
+    
+    for (let i = 0; i <= items.length - 1; i++){
+        output.push([])
+        
+        for(let a = 0; a <= 1; a++){
+            output[i].push(items[i][a])
+            output[i][a] -= subtractionItems[i][a]
+        }
+    }
+    console.log('After subtracting from items array, the new array is:\n', output)
+}
+
+subtract()
