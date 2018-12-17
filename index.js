@@ -1,5 +1,4 @@
 const {
-    logNumbers,
     add,
     subtract,
     multiply,
@@ -7,7 +6,6 @@ const {
 } = require('./functions')
 
 // All operation functions
-    logNumbers()
     add()
     subtract()
     multiply()

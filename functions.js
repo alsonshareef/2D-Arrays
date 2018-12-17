@@ -3,20 +3,6 @@ let items = [
     [2, 5]
 ];
 
-// Adds every number of 'items' array to a new one and logs the new one 
-exports.logNumbers = () => {
-    let output = []
-
-    for (let i = 0; i <= items.length - 1; i++){
-        output.push([])
-        for(let a = 0; a <= 1; a++){
-            output[i].push(items[i][a])
-        }
-    }
-        // console.log('Starting numbers:\n', output, '\n')
-}
-
-
 // ADDITION
 exports.add = () => {
     let output = []
@@ -25,6 +11,7 @@ exports.add = () => {
         [1, 6]
     ]
     
+    console.log('-- ADDITION --')
     console.log('Starting numbers:\n', items)
     console.log('The numbers that will be added to starting numbers are:\n', additionItems)
 
@@ -48,6 +35,7 @@ exports.subtract = () => {
         [3, 7]
     ]
 
+    console.log('-- SUBTRACTION --')
     console.log('Starting numbers:\n', items)
     console.log('The numbers that will be subtracted from starting numbers are:\n', subtractionItems)
     
@@ -71,6 +59,7 @@ exports.multiply = () => {
         [8, 4]
     ]
 
+    console.log('-- MULTIPLICATION --')
     console.log('Starting numbers:\n', items)
     console.log('The numbers that will be multiplied to starting numbers are:\n', multiplicationItems)
     
@@ -94,6 +83,7 @@ exports.divide = () => {
         [1, 2]
     ]
 
+    console.log('-- DIVISION --')
     console.log('Starting numbers:\n', items)
     console.log('The numbers that will be divided from starting numbers are:\n', divisionItems)
     
