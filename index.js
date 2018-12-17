@@ -61,3 +61,25 @@ let subtract = () => {
 }
 
 subtract()
+
+// MULTIPLICATION
+
+let multiply = () => {
+    let output = []
+    let multiplicationItems = [
+        [2, 6],
+        [8, 4]
+    ]
+    
+    for (let i = 0; i <= items.length - 1; i++){
+        output.push([])
+        
+        for(let a = 0; a <= 1; a++){
+            output[i].push(items[i][a])
+            output[i][a] *= multiplicationItems[i][a]
+        }
+    }
+    console.log('After multiplying from items array, the new array is:\n', output)
+}
+
+multiply()
